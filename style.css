@@ -1,0 +1,313 @@
+body{   
+    background-color: rgb(31, 31, 31);/* цвет фона страницы */
+    color: white;/* цвет основного текста */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* шрифт */
+
+}
+h1{
+    color: rgb(131, 248, 209); /* цвет заголовка*/
+    margin-left: 20px; /* отступ слева */
+    display: flex;
+    justify-content: center; /* позиционирование заголовка */
+
+}
+header{
+    display: flex;
+    height: 80px; /* высота шапки страницы */
+    background-color: rgb(122, 180, 160); /* цвет шапки страницы */
+    justify-content: center; /* позиционирование шапки */
+}
+footer{
+    height: 80px; /* высота подвала страницы */
+    background-color: rgb(122, 180, 160);/* цвет подвала страницы */
+    display: flex;
+    align-items: center;/* позиционирование подвала */
+    justify-content: center;/* позиционирование подвала */
+    margin-top: 50px;/* отступ от верха подвала страницы */
+}
+.logo{
+    border-radius: 15px;/* скругленные края */
+    width: 60px;/* ширина */
+    height: 60px;/* высота */
+    padding: 10px;/* внутренний отступ */
+    display: flex;
+    justify-content: flex-start;/* позиционирование*/
+}
+.links .link {
+    color: #000000;/* цвет текста ссылок в обычном состоянии */
+    font-style: italic;/* шрифт ссылок*/
+    border: none;
+    outline: none;
+    text-decoration: none;
+    transition: all 0.2s linear;/* скорость перехода */
+  }
+
+  .links .link:hover {
+    color: #ffffff;/* цвет текста ссылок в нажатом состоянии */
+    background-color: #000000;/* цвет заднего фона ссылок в нажатом состоянии */
+    border-radius: 3px;/* скругленные края */
+    transition: all 0.2s linear;/* скорость перехода */
+  }
+
+  .links .link + .link {
+    margin-left: 20px;/* отступ слева */
+  }
+  .navbar {
+    font-family: Arial;/* шрифт */
+    display: flex;
+    justify-content: start;/* позиционирование*/
+    align-items: center;/* позиционирование*/
+  }
+  
+  .navbar a {
+    float: left;/*элемент позиционируется как обычно, а затем вынимается из документа потока и сдвигается влево*/
+    font-size: 16px;/*размер шрифта*/
+    color: rgb(0, 0, 0);/*цвет шрифта*/
+    text-align: center;/*позиционирование текста*/
+    padding: 14px 16px;/*отступы внутри*/
+    text-decoration: none;
+  }
+
+  .dropdown {
+    float: left;/*элемент позиционируется как обычно, а затем вынимается из документа потока и сдвигается влево*/
+    color: #000000;/*цвет шрифта*/
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;/*размер шрифта*/
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);/*цвет шрифта*/
+    padding: 14px 16px;/*отступы внутри*/
+    background-color: inherit;/*наследный цвет*/
+  }
+
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(124, 211, 185);/*цвет фона*/
+    color: #000000;/*цвет шрифта*/
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;/*абсолютное размещение*/
+    background-color: #f9f9f9;/*цвет фона*/
+    min-width: 160px;/*минимальная ширина*/
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);/*тень элемента*/
+
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;/*цвет шрифта*/
+    padding: 12px 16px;/*отступы внутри*/
+    text-decoration: none;
+    display: block;
+    text-align: left;/*позиционирование текста*/
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;/*цвет фона*/
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;/*неподвижен*/
+  }
+
+ 
+*, *:before, *:after { 
+  box-sizing: border-box; 
+} 
+.modal {
+    display: block; 
+    justify-content: center;
+    z-index: 1; /* сверху*/
+    left: 0;
+    top: 0;
+    width: 100%; /* полная ширина */
+    height: 100%; /* полная высота */
+    overflow: auto; /* прокрутка при необходимости*/
+    background-color: rgb(0,0,0); /*цвет фона*/
+    padding-top: 10px;/*отступы внутри*/
+    padding-left: 10px;/*отступы внутри*/
+}
+
+.modal-content {
+    background-color: #fefefe;/*цвет фона*/
+    margin: 5px auto; /* отступ снаружи */
+    border: 1px solid #888; /*ширина и цвет контура*/
+    width: 80%; /* ширина на 80% от возможной */
+}
+
+
+.close {
+    position: absolute;/*абсолютное позиционирование*/
+    right: 25px;/*отступ справа*/
+    top: 100;/*отступ сверху*/
+    color: #fffcfc;/*цвет шрифта*/
+    font-size: 35px;/*размер шрифта*/
+    font-weight: bold;/*ширина шрифта*/
+}
+
+.close:hover,
+.close:focus {
+    color: red;/*цвет элемента*/
+    cursor: pointer;/*превращение курсора в режим нажатия*/
+}
+
+.animate {
+    -webkit-animation: animatezoom 0.6s; /*уменьшение элемента*/
+    animation: animatezoom 0.6s/*уменьшение элемента*/
+}
+
+@-webkit-keyframes animatezoom {/*настройка анимации*/
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {/*настройка анимации*/
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+.inf{
+    margin-left: 40px;/* отступ слева */
+    display: flex;
+    flex-direction: column;/* ориентирование размещения элементов */
+    align-items: center;/* позиционирование элемента */
+}
+
+.soc{
+    display: flex;
+    align-items: center;/* позиционирование элемента */
+    justify-content: center;/* позиционирование элемента */
+}
+form {
+    display: flex;
+    flex-direction: column;/* ориентирование размещения элементов */
+    justify-content: center;/* позиционирование элемента */
+    max-width: 300px;/* максимальная ширина */
+    margin: 0 auto;/* отступ снаружи */
+  }
+  
+  label {
+    font-weight: bold; /* ширина шрифта */
+    margin-top: 10px;/* отступ снаружи */
+  }
+  input,
+  textarea {
+    padding: 5px;/* отступ внутри */
+    margin-top: 5px;/* отступ сверху */
+    border: 1px solid #ccc;/*ширина и цвет контура*/
+    resize: none;
+  }
+  
+  button {
+    margin-top: 10px;/* отступ сверху */
+    padding: 5px 10px;/* отступ внутри */
+    background-color:rgb(122, 180, 160);/*цвет фона*/
+    border: none;/*контур*/
+    color: #000000;/*цвет шрифта*/
+    cursor: pointer;/*превращение курсора в режим нажатия*/
+  }
+  .btn{
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+    padding-top: 6px;
+    justify-content: center;
+    margin-top: 550px;
+    margin-right: 200px;
+    display: flex;
+    font-size: 200%;
+    font-style: unset;
+  }
+  .innput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    width: 250px;
+    margin-left: 200px;
+  }
+  .innput input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255,255,255,0.25);
+    background: #1d2b3a;
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+    transition: 0.5s;
+  }
+  .innput span{
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: rgba(255,255,255,0.25);
+    text-transform: uppercase;
+    transition: 0.5s;
+  }
+  .innput input:valid ~ div,
+  .innput input:focus ~ div{
+    color: #00dfc4;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    background: #1d2b3a;
+    border-left: 1px solid #00dfc4;
+    border-right: 1px solid #00dfc4;
+    letter-spacing: 0.2em;
+  }
+  .innput:nth-child(2) input:valid ~ div,
+  .innput:nth-child(2) input:focus ~ div{
+    background: #00dfc4;
+    color: #1d2b3a;
+    border-radius: 2px;
+  }
+  .innput input:valid,
+  .innput input:focus{
+    border: 1px solid #00dfc4;
+  } 
+  button {
+    margin-top: 10px;/* отступ сверху */
+    padding: 5px 10px;/* отступ внутри */
+    background-color:rgb(122, 180, 160);/*цвет фона*/
+    border: none;/*контур*/
+    color: #000000;/*цвет шрифта*/
+    cursor: pointer;/*превращение курсора в режим нажатия*/
+  }
+.cont{
+  border-radius: 15px;/*скругленные края*/
+  color: #ccc;/*цвет шрифта*/
+  background-color: rgb(69, 84, 79);/*цвет фона*/
+  text-decoration-style: dotted;/*подчеркивающая линяя*/
+  text-align: center;/*позиционирование текста*/
+  height: 25px;/*высота*/
+  width: 220px;/*ширина*/
+  margin-left: 30px;/*отступ слева*/
+}
+.pr{
+  border-radius: 30px;/*скругленные края*/
+  height: 300px;/*высота*/
+  margin-left: 30px;/*отступ слева*/
+  
+}
+.prd{
+  display: flex;
+  justify-content: center;/*позиционирование элемента*/
+}
+.socd{
+  display: flex;
+  justify-content: center;/*позиционирование элемента*/
+}
+.ent{
+  display: flex;
+  justify-content: center;/*позиционирование элемента*/
+}
+.container{
+  display: flex;
+  justify-content: center;/*позиционирование элемента*/
+}

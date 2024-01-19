@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Сайт h1</title>
+</head>
+<body>
+    <header>
+        
+        <div class="navbar">
+            <img class="logo" src="logo.jpg" alt="логотип">
+            <div class="dropdown">
+                <button class="dropbtn">Сайты
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Веб</a>
+                  <a href="#">Приложение</a>
+                </div>
+              </div>
+            <div class="dropdown">
+                <button class="dropbtn">Боты
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Вк</a>
+                  <a href="#">Телеграм</a>
+                </div>
+              </div>
+            <div class="dropdown">
+              <button class="dropbtn">Ардуино
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Мама-мама</a>
+                <a href="#">Папа-папа</a>
+              </div>
+            </div>
+
+    </header>
+                 <!-- Button to open the modal login form -->
+<div class="ent"><button class="dropbtn" onclick="document.getElementById('id01').style.display='block'">Вход</button></div>
+
+<!-- The Modal -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'"
+class="close" title="Close Modal">&times;</span>
+
+  <!-- Modal Content -->
+  
+
+    <div class="container">
+      <div class="innput">
+        <label for="uname"><p>Имя</label>
+        <input type="text" placeholder="Enter Username" name="uname" required></p>
+
+        <label for="psw"><p>Пароль</label>
+        <input type="password" placeholder="Enter Password" name="psw" required = "required"></p>
+      </div>
+      <button class="btn" type="submit"><p>Войти</button>
+      <label></p>
+        <p><input type="checkbox" checked="checked" name="remember"> Запомнить  меня
+      </label></p>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+    </div>
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        </script>
+  </form>
+</div>
+          </div>
+    <h1>Добро пожаловать, на наш сайт!</h1>
+    <div class="inf">
+    <li>На данном сайте присутствует система навигации с выпадающими списками</li>
+    <li>Кроме того, вы можете войти в систему</li>
+    <li>Подвал сайта содержит контактную информацию, социальные иконки и копирайт</li>
+    <li>Вы можете обратиться к нам по форме обратной связи</li>
+    <li>На сайте есть фото программиста</li>
+    </p>
+  </div>
+<div class="prd"><img class = "pr" src="prog.jpg" alt="картинка"></div>
+  <form id="feedbackForm">
+    <label for="name">Имя:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="message">Сообщение:</label>
+    <textarea id="message" name="message" required></textarea>
+    <button type="submit">Отправить</button>
+  </form>
+
+    <footer>
+      <div class="socd">
+        <div class="soc">
+          <div class="cont">ashlan-team@yandex.ru</div>
+          <div class="tel"><img src="tel1.png" alt="телеграм"></div>
+          <div class="tel"><img src="vk.png" alt="вконтакте"></div>
+          <div class="tel"><img src="kop.png" alt="копирайт"></div>
+        </div>
+      </div>  
+    </footer>
+</body>
+<script src="scripy.js"></script>
+</html>
